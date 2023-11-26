@@ -8,6 +8,71 @@ namespace MappingPerformance;
 public class ListTests
 {
 	[Test]
+	public void For1ThousandUsers_Read1User()
+	{
+		var users = UserLoader.LoadExtended(BigNumber.Thousands(1));
+		var metrics = new PerformanceMetrics();
+
+		metrics.Start();
+		PerformReadsByRandomId(users, 1);
+		metrics.Stop();
+
+		Assert.Pass(metrics.GetResults());
+	}
+
+	[Test]
+	public void For1ThousandUsers_Read10Users()
+	{
+		var users = UserLoader.LoadExtended(BigNumber.Thousands(1));
+		var metrics = new PerformanceMetrics();
+
+		metrics.Start();
+		PerformReadsByRandomId(users, 10);
+		metrics.Stop();
+
+		Assert.Pass(metrics.GetResults());
+	}
+
+	[Test]
+	public void For10ThousandUsers_Read100Users()
+	{
+		var users = UserLoader.LoadExtended(BigNumber.Thousands(10));
+		var metrics = new PerformanceMetrics();
+
+		metrics.Start();
+		PerformReadsByRandomId(users, 100);
+		metrics.Stop();
+
+		Assert.Pass(metrics.GetResults());
+	}
+
+	[Test]
+	public void For100ThousandUsers_Read100Users()
+	{
+		var users = UserLoader.LoadExtended(BigNumber.Thousands(100));
+		var metrics = new PerformanceMetrics();
+
+		metrics.Start();
+		PerformReadsByRandomId(users, 100);
+		metrics.Stop();
+
+		Assert.Pass(metrics.GetResults());
+	}
+
+	[Test]
+	public void For100ThousandUsers_Read1ThousandUsers()
+	{
+		var users = UserLoader.LoadExtended(BigNumber.Thousands(100));
+		var metrics = new PerformanceMetrics();
+
+		metrics.Start();
+		PerformReadsByRandomId(users, BigNumber.Thousands(1));
+		metrics.Stop();
+
+		Assert.Pass(metrics.GetResults());
+	}
+
+	[Test]
 	public void For1MillionUsers_Read1ThousandUsers()
 	{
 		var users = UserLoader.Load(BigNumber.Millions(1));
