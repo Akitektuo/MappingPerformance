@@ -8,7 +8,7 @@ namespace MappingPerformance;
 public class DoubleDictionaryTests
 {
 	[Test]
-	public void For1ThousandUsers_Read1User()
+	public void For1ThousandExtendedUsers_Read1User()
 	{
 		var users = UserLoader.LoadExtended(BigNumber.Thousands(1));
 		var usersById = users.ToDictionary(user => user.Id);
@@ -23,7 +23,7 @@ public class DoubleDictionaryTests
 	}
 
 	[Test]
-	public void For1ThousandUsers_Read10Users()
+	public void For1ThousandExtendedUsers_Read10Users()
 	{
 		var users = UserLoader.LoadExtended(BigNumber.Thousands(1));
 		var usersById = users.ToDictionary(user => user.Id);
@@ -38,7 +38,7 @@ public class DoubleDictionaryTests
 	}
 
 	[Test]
-	public void For10ThousandUsers_Read100Users()
+	public void For10ThousandExtendedUsers_Read100Users()
 	{
 		var users = UserLoader.LoadExtended(BigNumber.Thousands(10));
 		var usersById = users.ToDictionary(user => user.Id);
@@ -53,7 +53,7 @@ public class DoubleDictionaryTests
 	}
 
 	[Test]
-	public void For100ThousandUsers_Read100Users()
+	public void For100ThousandExtendedUsers_Read100Users()
 	{
 		var users = UserLoader.LoadExtended(BigNumber.Thousands(100));
 		var usersById = users.ToDictionary(user => user.Id);
@@ -68,7 +68,7 @@ public class DoubleDictionaryTests
 	}
 
 	[Test]
-	public void For100ThousandUsers_Read1ThousandUsers()
+	public void For100ThousandExtendedUsers_Read1ThousandUsers()
 	{
 		var users = UserLoader.LoadExtended(BigNumber.Thousands(100));
 		var usersById = users.ToDictionary(user => user.Id);
