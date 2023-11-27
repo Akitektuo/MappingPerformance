@@ -146,6 +146,6 @@ The tests were performed on a 8 core CPU (3.3 GHz base speed) and 32 GB of DDR4 
 |  |  |  | List | 9m 57s | 176 MB | 179 MB |
 |  |  |  | Double Dictionary | 16ms | 250 MB | 250 MB |
 | 1 000 000 | 100 000 | Yes |  |  |  |  |
-|  |  |  | List | ? | ? | ? |
+|  |  |  | List | 43m 24s | 680 MB | 682 MB |
 |  |  |  | Double Dictionary | 18ms | 744 MB | 744 MB |
 |  |  |  |  |  |  |  |
