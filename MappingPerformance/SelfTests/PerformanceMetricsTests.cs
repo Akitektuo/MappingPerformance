@@ -59,7 +59,7 @@ public class PerformanceMetricsTests
 	public void DoubleSession_Loading1MillionUsers()
 	{
 		var metrics = new PerformanceMetrics();
-		var resultBuilder = new MetricsFormattor();
+		var resultBuilder = new MetricsFormatter();
 		metrics.Start();
 
 		UserLoader.Load(BigNumber.Millions(1));

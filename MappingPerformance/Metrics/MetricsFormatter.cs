@@ -2,7 +2,7 @@
 
 namespace MappingPerformance.Metrics;
 
-internal class MetricsFormattor
+internal class MetricsFormatter
 {
 	private readonly StringBuilder results = new();
 
